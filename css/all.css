@@ -1,3 +1,20 @@
-h1{
-    color: green;
+body{
+    line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.meun{
+    width: 100%;
+}
+.meun ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meun li{
+    font-size: 28px;
+    font-weight: 700;
 }
