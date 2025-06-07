@@ -45,7 +45,7 @@ img {
     height: 100vh;
 }
 .blog_right{
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
     padding-left: 80px;
     height: 100vh;
     display: flex;
