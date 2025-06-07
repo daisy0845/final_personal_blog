@@ -40,31 +40,46 @@ img {
     border: 1px solid gray;
     margin-bottom: 48px;
 }
-.blog_header{
-    color: var(--color-primary);
-    height: 100vh;
+.blog_header {
+  display: flex;
+  height: 100vh;
 }
-.blog_right{
-    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
-    padding-left: 80px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+/* 讓圖片區塊也撐滿高度 */
+.blog_header picture {
+  display: block;
+  height: 100vh;
+  width: 50%;
+}
+
+/* 讓圖片鋪滿容器 */
+.blog_header picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 右邊背景區塊 */
+.blog_right {
+  width: 50%;
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-primary);
 }
 .blog_title{
     font-size: 120px;
     font-weight: 900;
-    display: block;
 }
-.blog_right h1{
-    display: block;
-}
-.header_picture ul, .blog_header ul{
+.header_picture ul {
     display: flex;
     align-items: center;
 }
-.header_picture li, .blog_header li{
+.header_picture li {
     width: 50%;
 }
 .header_picture .header_right{
@@ -79,7 +94,7 @@ img {
     color: var(--color-primary);
     margin: 8px 0px;
 }
-.header_picture .header_right button{
+.header_picture .header_right .btn_blue{
     font-weight: 700;
     background-color: var(--color-primary);
     color: white;
@@ -92,6 +107,19 @@ img {
     font-size: 28px;
     font-weight: 700;
     margin: 8px 0px;
+}
+.header_right p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 設定顯示 2 行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.header_right .btn_gray_line{
+    border: 1px solid gray;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 12px;
+    margin: 20px 0px;
 }
 @media (max-width: 767px){
     .header_picture ul{
@@ -162,11 +190,12 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-.main .gray-line{
+.main .btn_gray_line {
     border: 1px solid gray;
+    background-color: #fff;
     border-radius: 24px;
     padding: 12px;
-    margin: 80px 0px;
+    margin: 20px 0px;
 }
 .main .page{
     line-height: 24px;
