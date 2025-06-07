@@ -40,11 +40,31 @@ img {
     border: 1px solid gray;
     margin-bottom: 48px;
 }
-.header_picture ul{
+.blog_header{
+    color: var(--color-primary);
+    height: 100vh;
+}
+.blog_right{
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+    padding-left: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blog_title{
+    font-size: 120px;
+    font-weight: 900;
+    display: block;
+}
+.blog_right h1{
+    display: block;
+}
+.header_picture ul, .blog_header ul{
     display: flex;
     align-items: center;
 }
-.header_picture li{
+.header_picture li, .blog_header li{
     width: 50%;
 }
 .header_picture .header_right{
@@ -68,7 +88,7 @@ img {
     border-radius: 40px;
     border: 0px;
 }
-.header_picture .header_right h1{
+.header_picture .header_right h1, .blog_header h1{
     font-size: 28px;
     font-weight: 700;
     margin: 8px 0px;
@@ -86,7 +106,7 @@ img {
     }
     .header_picture .header_right{
         margin: 0;
-        padding: 0px 15px;
+        padding: 64px 15px;
     }
 }
 .content{
