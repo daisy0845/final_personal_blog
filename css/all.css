@@ -52,12 +52,12 @@ img {
   width: 50%;
 }
 
-/* 讓圖片鋪滿容器 */
+/* 讓圖片鋪滿容器*/
 .blog_header picture img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
+} 
 
 /* 右邊背景區塊 */
 .blog_right {
@@ -75,11 +75,11 @@ img {
     font-size: 120px;
     font-weight: 900;
 }
-.header_picture ul {
+.header_picture {
     display: flex;
     align-items: center;
 }
-.header_picture li {
+.header_picture .header_right, .header_picture picture{
     width: 50%;
 }
 .header_picture .header_right{
@@ -139,6 +139,103 @@ img {
 }
 .content{
     width: 100%;
+}
+.container {
+  width: 1296px;
+  margin: 0 auto;
+}
+.all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.all .item {
+  width: 416px;
+  margin: 0px 8px 40px 8px;
+}
+time {
+  font-size: 14px;
+  display: block;
+  line-height: 2;
+}
+.item h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.item p {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 設定顯示 2 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.item a {
+  text-decoration: none;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.item button {
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background: #fff;
+}
+.item .bg-blue {
+  background: blue;
+  color: #fff;
+  padding: 1px 10px;
+}
+.page_number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.page_number li{
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 767px){
+    .blog_header{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .blog_header picture, .blog_header img, .blog_right{
+        width: 100%;
+        height: auto;
+    }
+    .blog_right{
+        padding-bottom: 36px;
+    }
+     .header_picture {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .header_picture img,  .header_picture picture,  .header_picture .header_right{
+        width: 100%;
+    }
+    .header_picture .header_right{
+        margin: 0;
+        padding: 64px 15px;
+    }
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+     .all .item{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    .all .item time, .all .item h2,  .all .item p{
+        width: 100%;
+    }
 }
 .main{
     width: 636px;
