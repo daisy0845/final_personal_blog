@@ -266,7 +266,7 @@ time {
 }
 .index_main_bottom .father .son{
     position: absolute;
-    border: 16px solid gray;
+    border: 16px solid lightgray;
     top: 0;
     left: 0;
 }
@@ -289,6 +289,7 @@ time {
     height: 312px;
 }
 .index_main_bottom .final ul{
+    position: relative;
     list-style: none;
     display: flex;
 }
