@@ -35,6 +35,21 @@ img {
 /*@media (max-width: 992px;){
     平版的寬度
 }*/
+.blog_header{
+    position: relative;
+}
+.blog_header .introduce{
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    padding: 40px 80px;
+    right: 40px;
+    bottom: -120px;
+    width: 50%;
+}
+.blog_header .introduce p{
+    padding: 8px;
+}
 .header_picture{
     width: 100%;
     border: 1px solid gray;
@@ -44,9 +59,18 @@ img {
   display: flex;
   height: 100vh;
 }
-
+.blog_bottom {
+  display: flex;
+  height: 100vh;
+}
 /* 讓圖片區塊也撐滿高度 */
 .blog_header picture {
+  display: block;
+  height: 100vh;
+  width: 50%;
+}
+
+.blog_bottom picture {
   display: block;
   height: 100vh;
   width: 50%;
@@ -58,6 +82,12 @@ img {
   width: 100%;
   object-fit: cover;
 } 
+
+.blog_bottom picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 /* 右邊背景區塊 */
 .blog_right {
@@ -71,9 +101,21 @@ img {
   justify-content: center;
   color: var(--color-primary);
 }
-.blog_title{
-    font-size: 120px;
-    font-weight: 900;
+
+.blog_bottom .blog_right {
+  width: 50%;
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.blog_bottom .blog_content{
+    background-color: #fff;
 }
 .header_picture {
     display: flex;
@@ -121,6 +163,17 @@ img {
     padding: 12px;
     margin: 20px 0px;
 }
+.blog_right .blog_title{
+    font-size: 110px;
+    font-weight: 900;
+}
+.blog_header .icon{
+    display: flex;
+    align-items: center;
+}
+.blog_header .icon li{
+    padding: 8px;
+}
 @media (max-width: 767px){
     .header_picture ul{
         flex-direction: column;
@@ -140,6 +193,15 @@ img {
 .content{
     width: 100%;
 }
+.content .main{
+    width: 1296px;
+    margin: 110px auto 0px;
+}
+.content .main h2{
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+}
 .container {
   width: 1296px;
   margin: 0 auto;
@@ -148,10 +210,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 .all .item {
   width: 416px;
   margin: 0px 8px 40px 8px;
+}
+.content .main .all .item {
+    list-style: none;
+    width: 30%;
 }
 time {
   font-size: 14px;
@@ -160,6 +228,11 @@ time {
 }
 .item h2 {
   font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.content .main .all .item h2{
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -187,6 +260,37 @@ time {
   background: blue;
   color: #fff;
   padding: 1px 10px;
+}
+.index_main_bottom .father{
+    position: relative;
+}
+.index_main_bottom .father .son{
+    position: absolute;
+    border: 16px solid gray;
+    top: 0;
+    left: 0;
+}
+.index_main_bottom .father .on5_1{
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    width: 526px;
+    height: 296px;
+}
+.index_main_bottom .father .on5_2{
+    position: absolute;
+    z-index: 10;
+    background-color: #EDEDED;
+    bottom: 0;
+    right: 0;
+    width: 526px;
+    height: 312px;
+}
+.index_main_bottom .final ul{
+    list-style: none;
+    display: flex;
 }
 .page_number{
     display: flex;
@@ -297,6 +401,55 @@ time {
 .main .page{
     line-height: 24px;
 }
+.main .index_main_top{
+    padding: 0px 64px;
+    margin-bottom: 64px;
+}
+.main .item{
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 320px;
+    width: 100%;
+}
+.main .item .word{
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    width: 50%;
+    height: 160px;
+    padding: 30px;
+    top: 80px;
+    right: 0px;
+}
+.main .item .word_l{
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    width: 50%;
+    height: 160px;
+    padding: 30px;
+    top: 80px;
+    left: 0px;
+}
+.main .item .picture_right{
+    position: absolute;
+    height: 320px;
+    right: 0px;
+}
+.main .item .picture_left{
+    position: absolute;
+    height: 320px;
+    left: 0px;
+}
+.main .item .word .word_title{
+    font-size: 24px;
+    font-weight: 700;
+}
+.main .item .word_l .word_title{
+    font-size: 24px;
+    font-weight: 700;
+}
 @media (max-width: 767px){
     .main{
         width: 100%;
@@ -334,4 +487,5 @@ time {
     .power{
         display: block;
         border: 1px solid gray;
-}
+    }
+}   
